@@ -23,3 +23,10 @@ print(users["email"])
 print(users["address"]["street"])
 print(users["address"]["geo"]["lat"])
 print(users["address"]["geo"]["lng"])
+
+import json
+result = json.dumps(users)
+print(result)
+
+with open('results.json', 'w') as file:
+    json.dump(users, file)
